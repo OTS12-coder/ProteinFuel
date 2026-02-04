@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProteinFuel - Fuel Your Body, Boost Your Life</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                PROTEINFUEL
+            </div>
+            <ul class="nav-links">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-toggle" id="cartToggle">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SHOPPING CART SIDEBAR -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cartClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">
+                <i class="fas fa-credit-card"></i>
+                Checkout
+            </button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- SUCCESS POPUP -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-modal">
+            <div class="popup-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 id="popupTitle">Success!</h3>
+            <p id="popupMessage">Your action was completed successfully.</p>
+            <button class="popup-btn" id="popupBtn">OK</button>
+        </div>
+    </div>
+    
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 data-text="PROTEINFUEL">PROTEINFUEL</h1>
+            <p class="hero-tagline">Fuel Your Body, Boost Your Life</p>
+            <p class="hero-description">Premium protein supplements scientifically designed for maximum performance and recovery</p>
+            <a href="#products" class="hero-cta">
+                <span>Shop Now</span>
+                <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+    
+    <!-- PRODUCTS SECTION -->
+    <section class="products" id="products">
+        <div class="section-header">
+            <h2>Premium Products</h2>
+            <p>Scientifically formulated supplements for maximum performance and results</p>
+        </div>
+        
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card" data-product-id="1">
+                <div class="product-badge">Best Seller</div>
+                <div class="product-image">
+                    <img src="Assets/Images/1.jpg" alt="Whey Protein Isolate" style="object-fit: cover;">
+                    <div class="product-overlay">
+                        <button class="quick-add" data-id="1" data-name="Whey Protein Isolate" data-price="49.99" data-image="Assets/Images/1.jpg">
+                            <i class="fas fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Whey Protein Isolate</h3>
+                    <p class="product-description">Ultra-pure 90% protein isolate for maximum muscle growth and rapid recovery. Zero sugar, lactose-free.</p>
+                    <div class="product-footer">
+                        <p class="product-price">$49.99</p>
+                        <button class="add-to-cart" data-id="1" data-name="Whey Protein Isolate" data-price="49.99" data-image="Assets/Images/1.jpg">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card" data-product-id="2">
+                <div class="product-badge new">New</div>
+                <div class="product-image">
+                    <img src="Assets/Images/2.jpg" alt="Plant Protein" style="object-fit: cover;">
+                    <div class="product-overlay">
+                        <button class="quick-add" data-id="2" data-name="Plant Power Blend" data-price="44.99" data-image="Assets/Images/2.jpg">
+                            <i class="fas fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Plant Power Blend</h3>
+                    <p class="product-description">Premium vegan protein blend from peas, rice, and hemp. Complete amino acid profile for plant-based athletes.</p>
+                    <div class="product-footer">
+                        <p class="product-price">$44.99</p>
+                        <button class="add-to-cart" data-id="2" data-name="Plant Power Blend" data-price="44.99" data-image="Assets/Images/2.jpg">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card" data-product-id="3">
+                <div class="product-badge popular">Popular</div>
+                <div class="product-image">
+                    <img src="Assets/Images/3.jpg" alt="Mass Gainer Pro">
+                    <div class="product-overlay">
+                        <button class="quick-add" data-id="3" data-name="Mass Gainer Pro" data-price="59.99" data-image="Assets/Images/3.jpg">
+                            <i class="fas fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Mass Gainer Pro</h3>
+                    <p class="product-description">High-calorie formula with 50g protein and complex carbs. Perfect for serious muscle building and weight gain.</p>
+                    <div class="product-footer">
+                        <p class="product-price">$59.99</p>
+                        <button class="add-to-cart" data-id="3" data-name="Mass Gainer Pro" data-price="59.99" data-image="Assets/Images/3.jpg">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card" data-product-id="4">
+                <div class="product-image">
+                    <img src="Assets/Images/4.jpg" alt="Pre-Workout">
+                    <div class="product-overlay">
+                        <button class="quick-add" data-id="4" data-name="Ignite Pre-Workout" data-price="39.99" data-image="Assets/Images/4.jpg">
+                            <i class="fas fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Ignite Pre-Workout</h3>
+                    <p class="product-description">Explosive energy blend with beta-alanine, caffeine, and BCAAs. Crush your workouts with intensity.</p>
+                    <div class="product-footer">
+                        <p class="product-price">$39.99</p>
+                        <button class="add-to-cart" data-id="4" data-name="Ignite Pre-Workout" data-price="39.99" data-image="Assets/Images/4.jpg">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="product-card" data-product-id="5">
+                <div class="product-image">
+                    <img src="Assets/Images/5.jpg" alt="Recovery Matrix">
+                    <div class="product-overlay">
+                        <button class="quick-add" data-id="5" data-name="Recovery Matrix" data-price="42.99" data-image="Assets/Images/5.jpg">
+                            <i class="fas fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Recovery Matrix</h3>
+                    <p class="product-description">Advanced post-workout formula with glutamine, creatine, and electrolytes for optimal muscle repair.</p>
+                    <div class="product-footer">
+                        <p class="product-price">$42.99</p>
+                        <button class="add-to-cart" data-id="5" data-name="Recovery Matrix" data-price="42.99" data-image="Assets/Images/5.jpg">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-card" data-product-id="6">
+                <div class="product-badge limited">Limited</div>
+                <div class="product-image">
+                    <img src="Assets/Images/6.jpg" alt="Collagen Complete">
+                    <div class="product-overlay">
+                        <button class="quick-add" data-id="6" data-name="Collagen Complete" data-price="46.99" data-image="Assets/Images/6.jpg">
+                            <i class="fas fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Collagen Complete</h3>
+                    <p class="product-description">Hydrolyzed collagen peptides for joint health, skin elasticity, and overall wellness. Unflavored.</p>
+                    <div class="product-footer">
+                        <p class="product-price">$46.99</p>
+                        <button class="add-to-cart" data-id="6" data-name="Collagen Complete" data-price="46.99" data-image="Assets/Images/6.jpg">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- BENEFITS SECTION -->
+    <section class="benefits" id="benefits">
+        <div class="section-header">
+            <h2>Why Choose Us</h2>
+            <p>Premium quality meets unbeatable value</p>
+        </div>
+        
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-leaf"></i></div>
+                <h3>All-Natural Ingredients</h3>
+                <p>We source only the highest quality, natural ingredients with no artificial additives, fillers, or harmful chemicals. Pure nutrition for your body.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-dumbbell"></i></div>
+                <h3>High Protein Per Serving</h3>
+                <p>Each serving delivers 25-30g of premium protein to maximize muscle growth, recovery, and performance. Results you can see and feel.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-seedling"></i></div>
+                <h3>Vegan Options Available</h3>
+                <p>Plant-based protein options with complete amino acid profiles. Perfect for vegans, vegetarians, and anyone seeking dairy-free alternatives.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-shipping-fast"></i></div>
+                <h3>Fast Delivery</h3>
+                <p>Free express shipping on all orders. Get your supplements delivered to your door within 2-3 business days. Track your order in real-time.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header">
+            <h2>What Our Customers Say</h2>
+            <p>Real results from real people</p>
+        </div>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-quote">ProteinFuel's Whey Isolate has completely transformed my recovery time. I've gained 15 lbs of lean muscle in just 3 months. The taste is incredible and it mixes perfectly every time!</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=100&q=80" alt="Customer" class="testimonial-avatar">
+                    <div class="testimonial-info">
+                        <h4>Marcus Johnson</h4>
+                        <p>Fitness Athlete</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-quote">As a vegan athlete, finding quality protein was always a challenge. The Plant Power Blend is a game-changer - great taste, complete amino profile, and no bloating. Best vegan protein I've tried!</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Customer" class="testimonial-avatar">
+                    <div class="testimonial-info">
+                        <h4>Sarah Mitchell</h4>
+                        <p>Yoga Instructor</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-quote">The Mass Gainer Pro helped me break through my plateau. Finally hit my weight goal after years of struggling. Quality ingredients, no unnecessary fillers, and the chocolate flavor is amazing!</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" alt="Customer" class="testimonial-avatar">
+                    <div class="testimonial-info">
+                        <h4>David Chen</h4>
+                        <p>Bodybuilder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+        <div class="final-cta-content">
+            <h2>Get Your ProteinFuel Today!</h2>
+            <p>Join thousands of athletes transforming their bodies with premium protein supplements</p>
+            <a href="#products" class="cta-btn">
+                <span>Shop Products</span>
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ProteinFuel</h3>
+                <p>Premium protein supplements for serious athletes and fitness enthusiasts worldwide.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+
+                </div>
+                
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#products">Products</a>
+                <a href="#benefits">Benefits</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#">About Us</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <a href="#">Shipping Info</a>
+                <a href="#">Returns Policy</a>
+                <a href="#">FAQ</a>
+                <a href="#">Contact Us</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> info@proteinfuel.com</p>
+                <p><i class="fas fa-phone"></i> +1 (234) 567-890</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Fitness Ave, USA</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 ProteinFuel. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
